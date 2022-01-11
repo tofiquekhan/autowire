@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean id="accBean" class="myproject.autowire.beans.Account">
+ <property name="accNo" value="abc123"/>
+ <property name="accName" value="Tofique"/>
+ <property name="accType" value="Savings"/>
+ <property name="balance" value="25000"/>
+ </bean>
+ 
+ <bean id="addrBean" class="myproject.autowire.beans.Address">
+ <property name="hno" value="102B"/>
+ <property name="street" value="23/3rt"/>
+ <property name="city" value="Indore"/>
+ <property name="state" value="M.P."/>
+ </bean>
+ 
+ <bean id="empBean" class="myproject.autowire.beans.Employee">
+ <property name="eid" value="E-111"/>
+ <property name="ename" value="Tofique"/>
+ <property name="esal" value="203400"/>
+ <property name="account" ref="accBean"/>
+ <property name="address" ref="addrBean"/>
+ </bean>
+ 
+</beans>
