@@ -18,7 +18,7 @@
  <property name="state" value="M.P."/>
  </bean>
  
- <bean id="empBean" class="myproject.autowire.beans.Employee">
+ <bean id="empBean" class="myproject.autowire.beans.Employee" autowire="no">
  <property name="eid" value="E-111"/>
  <property name="ename" value="Tofique"/>
  <property name="esal" value="203400"/>
