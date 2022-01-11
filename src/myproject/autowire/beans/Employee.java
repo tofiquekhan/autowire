@@ -5,7 +5,8 @@ public class Employee {
 	private String eid;
 	private String ename;
 	private float esal;
-	private Account account;
+	private Account account1;
+	private Account account2;
 	private Address address;
 	public String getEid() {
 		return eid;
@@ -25,11 +26,18 @@ public class Employee {
 	public void setEsal(float esal) {
 		this.esal = esal;
 	}
-	public Account getAccount() {
-		return account;
+	
+	public Account getAccount1() {
+		return account1;
 	}
-	public void setAccount(Account account) {
-		this.account = account;
+	public void setAccount1(Account account1) {
+		this.account1 = account1;
+	}
+	public Account getAccount2() {
+		return account2;
+	}
+	public void setAccount2(Account account2) {
+		this.account2 = account2;
 	}
 	public Address getAddress() {
 		return address;
@@ -45,12 +53,19 @@ public class Employee {
 		System.out.println("Employee Name		: "+ename);
 		System.out.println("Employee Salary 	: "+esal);
 		System.out.println();
-		System.out.println("Employee Account Details");
+		System.out.println("Employee Account 1 Details");
 		System.out.println("-------------------------------");
-		System.out.println("Account Number 		: "+account.getAccNo());
-		System.out.println("Account Name		: "+account.getAccName());
-		System.out.println("Account Type 		: "+account.getAccType());
-		System.out.println("Account Balance 	: "+account.getBalance());
+		System.out.println("Account Number 		: "+account1.getAccNo());
+		System.out.println("Account Name		: "+account1.getAccName());
+		System.out.println("Account Type 		: "+account1.getAccType());
+		System.out.println("Account Balance 	: "+account1.getBalance());
+		System.out.println();
+		System.out.println("Employee Account 2 Details");
+		System.out.println("-------------------------------");
+		System.out.println("Account Number 		: "+account1.getAccNo());
+		System.out.println("Account Name		: "+account1.getAccName());
+		System.out.println("Account Type 		: "+account1.getAccType());
+		System.out.println("Account Balance 	: "+account1.getBalance());
 		System.out.println();
 		System.out.println("Employee Address Details");
 		System.out.println("------------------------------");

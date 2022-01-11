@@ -11,6 +11,13 @@
  <property name="balance" value="25000"/>
  </bean>
  
+  <bean id="accoBean" class="myproject.autowire.beans.Account">
+ <property name="accNo" value="abc"/>
+ <property name="accName" value="Imran"/>
+ <property name="accType" value="Savings"/>
+ <property name="balance" value="70000"/>
+ </bean>
+ 
  <bean id="addressBean" class="myproject.autowire.beans.Address">
  <property name="hno" value="102B"/>
  <property name="street" value="23/3rt"/>
