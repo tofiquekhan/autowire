@@ -4,21 +4,21 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans.xsd">
  
- <bean id="accBean" class="myproject.autowire.beans.Account">
+ <bean id="account" class="myproject.autowire.beans.Account">
  <property name="accNo" value="abc123"/>
  <property name="accName" value="Tofique"/>
  <property name="accType" value="Savings"/>
  <property name="balance" value="25000"/>
  </bean>
  
-  <bean id="accoBean" class="myproject.autowire.beans.Account">
+  <bean id="accoBean" class="myproject.autowire.beans.Account" autowire-candidate="false">
  <property name="accNo" value="abc"/>
  <property name="accName" value="Imran"/>
  <property name="accType" value="Savings"/>
  <property name="balance" value="70000"/>
  </bean>
  
- <bean id="addressBean" class="myproject.autowire.beans.Address">
+ <bean id="address" class="myproject.autowire.beans.Address">
  <property name="hno" value="102B"/>
  <property name="street" value="23/3rt"/>
  <property name="city" value="Indore"/>
