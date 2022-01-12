@@ -25,11 +25,17 @@
  <property name="state" value="M.P."/>
  </bean>
  
- <bean id="empBean" class="myproject.autowire.beans.Employee" autowire="byType">
+ <bean id="empBean" class="myproject.autowire.beans.Employee" >
+ <constructor-arg value="E-333"/>
+ <constructor-arg value="Sami"/>
+ <constructor-arg value="87499"/>
+ <constructor-arg ref="account"/>
+ <constructor-arg ref="address"/>
+ <!-- 
  <property name="eid" value="E-111"/>
  <property name="ename" value="Tofique"/>
  <property name="esal" value="203400"/>
- <!-- <property name="account" ref="accBean"/>
+ <property name="account" ref="accBean"/>
  <property name="address" ref="addrBean"/>
   -->
   </bean>
