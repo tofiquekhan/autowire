@@ -4,14 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans.xsd">
  
- <bean id="account" class="myproject.autowire.beans.Account">
+ <bean id="account1" class="myproject.autowire.beans.Account">
  <property name="accNo" value="abc123"/>
  <property name="accName" value="Tofique"/>
  <property name="accType" value="Savings"/>
  <property name="balance" value="25000"/>
  </bean>
  
-  <bean id="accoBean" class="myproject.autowire.beans.Account" autowire-candidate="false">
+  <bean id="accoBean" class="myproject.autowire.beans.Account" autowire-candidate="false" >
  <property name="accNo" value="abc"/>
  <property name="accName" value="Imran"/>
  <property name="accType" value="Savings"/>
@@ -25,12 +25,12 @@
  <property name="state" value="M.P."/>
  </bean>
  
- <bean id="empBean" class="myproject.autowire.beans.Employee" >
- <constructor-arg value="E-333"/>
- <constructor-arg value="Sami"/>
- <constructor-arg value="87499"/>
- <constructor-arg ref="account"/>
- <constructor-arg ref="address"/>
+ <bean id="empBean" class="myproject.autowire.beans.Employee" autowire="constructor">
+ <constructor-arg value="E-333" index="0"/>
+ <constructor-arg value="Sami" index="1"/>
+ <constructor-arg value="87499.00" index="2"/>
+ <!-- <constructor-arg ref="account"/>
+ <constructor-arg ref="address"/> -->
  <!-- 
  <property name="eid" value="E-111"/>
  <property name="ename" value="Tofique"/>
